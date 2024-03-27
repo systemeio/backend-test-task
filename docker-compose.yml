@@ -1,0 +1,13 @@
+services:
+    sio_test:
+        user: app
+        build:
+            context: .
+            args:
+                USER_ID: ${USER_ID}
+        ports:
+            - "8337:8337"
+        volumes:
+            - .:/app:rw
+        environment:
+            - APP_ENV=dev
