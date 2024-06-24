@@ -32,7 +32,7 @@ restart: stop start ## Restart services.
 console: ## Login in console.
 	${DC_EXEC} /bin/bash
 
-install:
+install: ## Install dependencies without running the whole application.
 	${DC_RUN} composer install
 
 success-message:
